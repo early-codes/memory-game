@@ -23,8 +23,11 @@ const Cards = (props) => {
         }
 
         const controlIncreaser = (event) => {
-            controlObject[event.target.getAttribute.name] += +1
-            props.callback(controlObject)
+            controlObject[who] += +1;
+            if (controlObject[who] > 1) {
+                Object.keys(controlObject).forEach(key => controlObject[key] = 0)
+            }
+            props.callback(controlObject);
         }
         controlIncreaser(event)
         shuffle(array)
@@ -46,53 +49,53 @@ const Cards = (props) => {
     }
 
     const [cardArray, setCardArray] = useState([
-        <div key="taffarel" name="taffarel" className="card" style={{ backgroundColor: "red" }} onClick={(event) => handleClick(event, cardArray, "taffarel")}>
-        <h3>Taffarel</h3>
-        <img src={taffarel} />
+        <div key="taffarel" name="taffarel" className="card" onClick={(event) => handleClick(event, cardArray, "taffarel")}>
+            <h3>Taffarel</h3>
+            <img src={taffarel} alt="Taffarel" />
         </div>,
-        <div key="capone" name="capone" className="card" style={{ backgroundColor: "blue" }} onClick={(event) => handleClick(event, cardArray, "capone")}>
-        <h3>Capone</h3>
-        <img src={capone} />
+        <div key="capone" name="capone" className="card" onClick={(event) => handleClick(event, cardArray, "capone")}>
+            <h3>Capone</h3>
+            <img src={capone} alt = "Capone" />
         </div>,
-        <div key="bulent" name="bulent" className="card" style={{ backgroundColor: "grey" }} onClick={(event) => handleClick(event, cardArray, "bulent")}>
-                <h3>Bulent</h3>
-        <img src={bulent} /></div>,
-        <div key="popescu" name="popescu" className="card" style={{ backgroundColor: "aqua" }} onClick={(event) => handleClick(event, cardArray, "popescu")}>
-        <h3>Popescu</h3>
-        <img src={popescu} />
+        <div key="bulent" name="bulent" className="card" onClick={(event) => handleClick(event, cardArray, "bulent")}>
+            <h3>Bulent</h3>
+            <img src={bulent} alt="Bulent" /></div>,
+        <div key="popescu" name="popescu" className="card" onClick={(event) => handleClick(event, cardArray, "popescu")}>
+            <h3>Popescu</h3>
+            <img src={popescu} alt="Popescu" />
         </div>,
-        <div key="ergun" name="ergun" className="card" style={{ backgroundColor: "purple" }} onClick={(event) => handleClick(event, cardArray, "ergun")}>
-        <h3>Ergun</h3>
-        <img src={ergun} />
+            <div key="ergun" name="ergun" className="card" onClick={(event) => handleClick(event, cardArray, "ergun")}>
+            <h3>Ergun</h3>
+            <img src={ergun} alt="Ergun" />
         </div>,
-        <div key="okan" name="okan" className="card" style={{ backgroundColor: "salmon" }} onClick={(event) => handleClick(event, cardArray, "okan")}>
-        <h3>Okan</h3>
-        <img src={okan} />
+        <div key="okan" name="okan" className="card" onClick={(event) => handleClick(event, cardArray, "okan")}>
+            <h3>Okan</h3>
+            <img src={okan} alt="Okan" />
         </div>,
-        <div key="suat" name="suat" className="card" style={{ backgroundColor: "magenta" }} onClick={(event) => handleClick(event, cardArray, "suat")}>
-        <h3>Suat</h3>
-        <img src={suat} />
+        <div key="suat" name="suat" className="card" onClick={(event) => handleClick(event, cardArray, "suat")}>
+            <h3>Suat</h3>
+            <img src={suat} alt="Suat" />
         </div>,
-        <div key="umit" name="umit" className="card" style={{ backgroundColor: "cyan" }} onClick={(event) => handleClick(event, cardArray, "umit")}>
-        <h3>Umit</h3>
-        <img src={umit} />
+        <div key="umit" name="umit" className="card" onClick={(event) => handleClick(event, cardArray, "umit")}>
+            <h3>Umit</h3>
+            <img src={umit} alt="Umit" />
         </div>,
-        <div key="hagi" name="hagi" className="card" style={{ backgroundColor: "yellow" }} onClick={(event) => handleClick(event, cardArray, "hagi")}>
-        <h3>Hagi</h3>
-        <img src={hagi} />
+        <div key="hagi" name="hagi" className="card" onClick={(event) => handleClick(event, cardArray, "hagi")}>
+            <h3>Hagi</h3>
+            <img src={hagi} alt="Hagi" />
         </div>,
-        <div key="hakan" name="hakan" className="card" style={{ backgroundColor: "green" }} onClick={(event) => handleClick(event, cardArray, "hakan")}>
-        <h3>Hakan</h3>
-        <img src={hakan} />
+        <div key="hakan" name="hakan" className="card" onClick={(event) => handleClick(event, cardArray, "hakan")}>
+            <h3>Hakan</h3>
+            <img src={hakan} alt="Hakan" />
         </div>,
-        <div key="arif" name="arif" className="card" style={{ backgroundColor: "#342567" }} onClick={(event) => handleClick(event, cardArray, "arif")}>
-        <h3>Arif</h3>
-        <img src={arif} />
+        <div key="arif" name="arif" className="card" onClick={(event) => handleClick(event, cardArray, "arif")}>
+            <h3>Arif</h3>
+            <img src={arif} alt="Arif" />
         </div>,
-        <div key="terim" name="terim" className="card" style={{ backgroundColor: "#634623" }} onClick={(event) => handleClick(event, cardArray, "terim")}>
+        <div key="terim" name="terim" className="card" onClick={(event) => handleClick(event, cardArray, "terim")}>
         <h3>Terim</h3>
-        <img src={terim} />
-        </div>,
+        <img src={terim} alt="Terim" />
+        </div>
     ])
 
 

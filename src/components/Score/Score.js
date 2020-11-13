@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Score.css'
 
 const Score = (props) => {
 
-    const score = (data) => {
+    const scoreFiller = (data) => {
         if (Math.max.apply(null, Object.values({ ...data })) < 2) {
             return Object.values(props.data).reduce((acc, curr) => acc + curr, 0)
         } else {
@@ -11,12 +11,21 @@ const Score = (props) => {
         }
     }
 
+    const [bestScore, setBestScore] = useState(0)
+
+    const bestScoreFiller = (score) => {
+        if (score > bestScore) {
+            setBestScore(score);
+        }   
+        return bestScore;     
+    }
+
     console.log(props.data)
 
 
     return (
         <div className="score components">
-            <h3>SCORE: {score(props.data)} BEST SCORE:20</h3>
+            <h3>SCORE: {scoreFiller(props.data)} BEST SCORE: {bestScoreFiller(scoreFiller(props.data))}</h3>
         </div>
     )
 }
