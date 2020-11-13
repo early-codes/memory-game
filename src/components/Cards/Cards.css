@@ -1,11 +1,22 @@
 .cards {
     height: 800px;
-    margin: 40px;
+    margin: 5vh;
 }
 
 .card {
-    height: 350px;
-    width: 260px;
+    height: 40vh;
+    width: 14.5vw;
     display: inline-block;
-    margin: 20px
+    margin: 1vh;
+    text-align: center;
+}
+
+.card img {
+    width: 12vw;
+    height: 30vh;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 1vh auto;
 }

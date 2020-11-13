@@ -7,7 +7,7 @@ const Score = (props) => {
         if (Math.max.apply(null, Object.values({ ...data })) < 2) {
             return Object.values(props.data).reduce((acc, curr) => acc + curr, 0)
         } else {
-
+            return 0;
         }
     }
 
